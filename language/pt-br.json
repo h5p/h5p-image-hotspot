@@ -23,10 +23,6 @@
             "description": "Clique na miniatura da imagem para posicionar o ponto de acesso"
           },
           {
-            "label": "Cobrir a imagem de fundo inteira",
-            "description": "Quando o usuário clicar no ponto de acesso, o popup cobrirá toda a imagem de fundo"
-          },
-          {
             "label": "Cabeçalho",
             "description": "Cabeçalho opcional para o popup"
           },
@@ -35,6 +31,45 @@
             "field": {
               "label": "Item do conteúdo"
             }
+          },
+          {
+            "label": "Popup settings",
+            "fields": [
+              {
+                "label": "Size and position",
+                "description": "Decide how much space the popup will take when the user clicks on a hotspot",
+                "options": [
+                  {
+                    "label": "Cover free space next to hotspot"
+                  },
+                  {
+                    "label": "Cobrir a imagem de fundo inteira"
+                  },
+                  {
+                    "label": "Custom"
+                  }
+                ]
+              },
+              {
+                "label": "Maximum width (in percent)",
+                "description": "The width of the popup will be limited to the percentage relative to the background image's width"
+              },
+              {
+                "label": "Position",
+                "description": "By default, the popup will be placed left or right of the corresponding hotspot depending on where there's more space",
+                "options": [
+                  {
+                    "label": "Auto"
+                  },
+                  {
+                    "label": "Left of hotspot"
+                  },
+                  {
+                    "label": "Right of hotspot"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

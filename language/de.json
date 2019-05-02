@@ -23,10 +23,6 @@
             "description": "Klicke das Vorschaubild an, um den Hotspot zu platzieren"
           },
           {
-            "label": "Überdecke das gesamte Hintergrundbild",
-            "description": "Sobald der Lernende auf den Hotspot klickt, wird das erscheinende Fenster den gesamten Hintergrund überdecken"
-          },
-          {
             "label": "Kopfzeile",
             "description": "Optionale Kopfzeile für das Fenster"
           },
@@ -35,6 +31,45 @@
             "field": {
               "label": "Inhaltsobjekt"
             }
+          },
+          {
+            "label": "Popup-Einstellungen",
+            "fields": [
+              {
+                "label": "Größe und Position",
+                "description": "Lege fest, wie viel Platz das Popup einnimmt, wenn auf den Hotspot geklickt wird",
+                "options": [
+                  {
+                    "label": "Überdecke den freien Platz neben dem Hotspot"
+                  },
+                  {
+                    "label": "Überdecke das gesamte Hintergrundbild"
+                  },
+                  {
+                    "label": "Individuell"
+                  }
+                ]
+              },
+              {
+                "label": "Maximale Breite (in Prozent)",
+                "description": "Die Breite des Popups wird auf den angegebenen Prozentsatz relativ zur Breite des Hintergrundbildes begrenzt"
+              },
+              {
+                "label": "Position",
+                "description": "Standardmäßig wird das Popup links oder rechts neben dem zugehörigen Hotspot angezeigt, je nachdem, auf welcher Seite mehr Platz besteht",
+                "options": [
+                  {
+                    "label": "Automatisch"
+                  },
+                  {
+                    "label": "Links vom Hotspot"
+                  },
+                  {
+                    "label": "Rechts vom Hotspot"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
