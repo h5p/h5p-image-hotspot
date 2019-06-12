@@ -2,34 +2,76 @@
   "semantics": [
     {
       "label": "תמונת רקע",
-      "description": "תמונה מוצגת ברקע"
+      "description": "תמונה מוצגת ברקע."
     },
     {
-      "label": "Alternative text for background image",
-      "description": "If the browser can't load the image this text will be displayed instead. Also used by assistive technologies."
+      "label": "",
+      "description": ""
     },
     {
-      "label": "Hotspot color",
-      "description": "The color of the hotspots"
+      "label": "צלמית נקודה־חמה",
+      "options": [
+        {
+          "label": "צלמית מוגדרת מראש"
+        },
+        {
+          "label": "תמונה שהועלתה"
+        }
+      ]
     },
     {
-      "entity": "hotspot",
-      "label": "Hotspots",
+      "label": "צלמית מוגדרת מראש",
+      "description": "Using a predefined icon for the hotspot.",
+      "options": [
+        {
+          "label": "ועוד"
+        },
+        {
+          "label": "מינוס"
+        },
+        {
+          "label": "כפול"
+        },
+        {
+          "label": "בדיקה"
+        },
+        {
+          "label": "שאלה"
+        },
+        {
+          "label": "מידע"
+        },
+        {
+          "label": "סימן קריאה"
+        }
+      ]
+    },
+    {
+      "label": "התמונה שעלתה",
+      "description": ""
+    },
+    {
+      "label": "צבע הנקודה־החמה",
+      "description": "צבע הנקודות־החמות"
+    },
+    {
+      "entity": "נקודה־חמה",
+      "label": "נקודות־חמות",
       "field": {
-        "label": "Hotspot",
+        "label": "נקודה־חמה",
         "fields": [
           {
-            "label": "Hotspot position",
+            "label": "מיקום נקודה־חמה",
             "description": "Click on the thumbnail image to place the hotspot"
           },
           {
-            "label": "Header",
-            "description": "Optional header for the popup"
+            "label": "כותרת",
+            "description": "כותרת אפשרית עבור החלון הקופץ"
           },
           {
-            "label": "Popup content",
+            "label": "תוכן החלון הקופץ",
             "field": {
-              "label": "Content Item"
+              "label": "תוכן הפריט"
             }
           },
           {
@@ -76,12 +118,12 @@
     },
     {
       "label": "Hotspot label for assistive technologies",
-      "default": "Hotspot #num",
+      "default": "נקודה־חמה #num",
       "description": "Will help announce what hotspot element has been navigated to if there is no header specified for a hotspot. #num can be used to replace the hotspot number."
     },
     {
       "label": "Close button label for assistive technologies",
-      "default": "Close"
+      "default": "סגירה"
     }
   ]
 }

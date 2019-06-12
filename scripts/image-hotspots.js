@@ -29,7 +29,9 @@ H5P.ImageHotspots = (function ($, EventDispatcher) {
       image: null,
       hotspots: [],
       hotspotNumberLabel: 'Hotspot #num',
-      closeButtonLabel: 'Close'
+      closeButtonLabel: 'Close',
+      iconType: 'icon',
+      icon: 'plus'
     }, options);
     // Keep provided id.
     this.id = id;
@@ -189,7 +191,7 @@ H5P.ImageHotspots = (function ($, EventDispatcher) {
     var containerWidth = self.$container.width();
     var containerHeight = self.$container.height();
     var width = containerWidth;
-    var height = Math.floor((width/self.options.image.width)*self.options.image.height);
+    var height = Math.floor((width/self.options.image.width) * self.options.image.height);
     var forceImageHeight = e && e.data && e.data.forceImageHeight;
 
     // Check if decreasing iframe size
@@ -201,7 +203,7 @@ H5P.ImageHotspots = (function ($, EventDispatcher) {
     // If fullscreen, we have both a max width and max height.
     if (!forceImageHeight && H5P.isFullscreen && height > containerHeight) {
       height = containerHeight;
-      width = Math.floor((height/self.options.image.height)*self.options.image.width);
+      width = Math.floor((height/self.options.image.height) * self.options.image.width);
     }
 
     // Check if we need to apply semi full screen fix.

@@ -22,14 +22,20 @@
     this.isSmallDeviceCB = isSmallDeviceCB;
     this.options = options;
 
+    // A utility variable to check if a Predefined icon or an uploaded image should be used.
+    var iconImageExists = (options.iconImage !== undefined && options.iconType === 'image');
+
     if (this.config.content === undefined  || this.config.content.length === 0) {
       throw new Error('Missing content configuration for hotspot. Please fix in editor.');
     }
 
-    this.$element = $('<button/>', {
-      'class': 'h5p-image-hotspot',
+    // Check if there is an iconImage that should be used instead of fontawesome icons to determine the html element.
+    this.$element = $(iconImageExists ? '<img/>' : '<button/>', {
+      'class': 'h5p-image-hotspot ' + (!iconImageExists ? 'h5p-image-hotspot-' + options.icon : ''),
+      'role': 'button',
       'tabindex': 0,
       'aria-haspopup': true,
+      src: iconImageExists ? H5P.getPath(options.iconImage.path, this.id) : undefined,
       click: function () {
         // prevents duplicates while loading
         if (self.loadingPopup) {
