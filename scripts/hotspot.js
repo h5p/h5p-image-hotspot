@@ -164,8 +164,9 @@
       self.$element.outerWidth(),
       self.config.header,
       popupClass,
-      self.config.alwaysFullscreen || self.isSmallDeviceCB(),
-      self.options
+      self.config.popupSettings.sizePosition === 'fullscreen' || self.isSmallDeviceCB(),
+      self.options,
+      self.config.popupSettings
     );
 
     // Release
